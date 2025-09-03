@@ -12,8 +12,15 @@ As of now, there are two modes of operation:
 
 # Building
 1. Install go 1.20 or above. Follow instructions [here](https://go.dev/doc/install) to install golang.
-2. Clone the repository
-3. Build the binary using the below command. This will generate a binary named `csbench` in the current directory.
+```
+ wget https://go.dev/dl/go1.25.0.linux-amd64.tar.gz
+ sudo rm -rf /usr/local/go
+ sudo tar -C /usr/local/ -xzf go1.25.0.linux-amd64.tar.gz 
+ export PATH=$PATH:/usr/local/go/bin
+ go version
+```
+3. Clone the repository
+4. Build the binary using the below command. This will generate a binary named `csbench` in the current directory.
 ```bash
 go build
 ```

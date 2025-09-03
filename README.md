@@ -26,7 +26,12 @@ go build
 ```
 
 # Usage
-
+```
+./csbench -create -domain -limits -network -vm -volume -format csv -output report/create.csv
+./csbench -teardown -domain -limits -network -vm -volume -format csv -output report/teardown.csv
+./csbench -vmaction toggle --format csv --output report/vmaction.csv
+./csbench -benchmark
+```
 Setup a config file. Check the sample config file [here](./config/config).
 
 ```

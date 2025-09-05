@@ -406,7 +406,7 @@ func createResources(domainFlag, limitsFlag, networkFlag, vmFlag, volumeFlag *bo
 			numVolumesPerVM := config.NumVolumes
 
 			cs := cloudstack.NewAsyncClient(apiURL, profile.ApiKey, profile.SecretKey, false)
-
+			cs.Timeout(time.Duration(300 * time.Second))
 			var results = make(map[string][]*Result)
 
 			if *domainFlag {
